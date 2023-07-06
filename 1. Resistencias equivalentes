@@ -1,0 +1,17 @@
+configuracion = input('Ingrese configuracion (serie/paralelo): ')
+2 cantidad = int(input('Ingrese cantidad de resistencias: '))
+3 i = 0
+4 suma = 0
+5
+6 while i < cantidad:
+7 resistencia = float(input('Ingrese la resistencia '+str(i+1)+': '))
+8 if configuracion=='serie':
+9 suma += resistencia
+10 else:
+11 suma += 1/resistencia
+12 i += 1
+13
+14 if configuracion == 'paralelo':
+15 suma = suma**-1
+16
+17 print('Req =', suma)
