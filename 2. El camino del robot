@@ -1,0 +1,31 @@
+1 dato = input("Ruta: ")
+2 vertical = 0
+3 horizontal = 0
+4
+5 while dato != "":
+6 if dato == "n":
+7 vertical += 1
+8 elif dato == "s":
+9 vertical -= 1
+10 elif dato == "e":
+11 horizontal += 1
+12 elif dato == "o":
+13 horizontal -= 1
+14 dato = input("Ruta: ")
+15
+16 ruta = ""
+17 while vertical > 0:
+18 ruta += "n"
+19 vertical -= 1
+20 while vertical < 0:
+21 ruta += "s"
+22 vertical += 1
+23
+24 while horizontal > 0:
+25 ruta += "e"
+26 horizontal -= 1
+27 while horizontal < 0:
+28 ruta += "o"
+29 horizontal += 1
+30
+31 print("Ruta optimizada:", ruta)
